@@ -1,0 +1,128 @@
+<!DOCTYPE html>
+<html lang="id">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>Hi! Kebab Signature</title>
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link href="https://fonts.googleapis.com/css2?family=Poppins:wght@500;700;900&display=swap" rel="stylesheet">
+<link rel="stylesheet" href="style.css">
+</head>
+<body>
+<nav>
+  <div class="wrap">
+    <div class="logo"><span>Hi!</span>Kebab</div>
+    <ul>
+      <li><a href="#tentang">Tentang</a></li>
+      <li><a href="#menu">Menu</a></li>
+      <li><a href="#putar">Putaran</a></li>
+      <li><a href="#keranjang">Keranjang</a></li>
+    </ul>
+    <button id="userBtn" class="userbtn">👤 Masuk</button>
+  </div>
+</nav>
+<div id="banner"></div>
+
+<header class="hero">
+  <div class="wrap">
+    <div>
+      <span class="pill">🔥 Kebab kekinian dekat kampus</span>
+      <h1>Hi! Lapar?<em>Kebab Signature</em> siap sapa kamu!</h1>
+      <p>10 rasa kebab daging sapi, ukuran BIG atau SMALL. Putar hadiah harian: gratis ongkir, diskon 5%, atau coba keberuntunganmu!</p>
+      <p><a class="btn dark" href="#menu">Lihat Menu</a> <a class="btn red" href="#putar">Putar Hadiah 🎁</a></p>
+    </div>
+    <div class="emoji" aria-hidden="true">🌯</div>
+  </div>
+</header>
+<div class="ticker"><div>🌯 BEEF KEBAB &nbsp;•&nbsp; 🔥 SPICY BBQ &nbsp;•&nbsp; 🧀 CREAMY CHEESE &nbsp;•&nbsp; 🍍 PINEAPPLE &nbsp;•&nbsp; 🌶️ SPICY KOREA &nbsp;•&nbsp; 🧄 SPICY GARLIC &nbsp;•&nbsp; 🍛 CURRY &nbsp;•&nbsp; 🌯 BEEF KEBAB &nbsp;•&nbsp; 🔥 SPICY BBQ &nbsp;•&nbsp; 🧀 CREAMY CHEESE &nbsp;•&nbsp; 🍍 PINEAPPLE &nbsp;•&nbsp; 🌶️ SPICY KOREA &nbsp;•&nbsp; 🧄 SPICY GARLIC &nbsp;•&nbsp; 🍛 CURRY &nbsp;•&nbsp;</div></div>
+
+<section id="tentang">
+  <div class="wrap">
+    <h2>Tentang Hi! Kebab Signature</h2>
+    <p class="sub">UMKM kebab milik Pak Rosad: ramah, praktis, dan dekat dengan mahasiswa.</p>
+    <div class="grid">
+      <div class="card"><div class="ic">👋</div><h3>Friendly</h3><p>Sapaan “Hi!” membuat pelanggan merasa dekat dan disambut.</p></div>
+      <div class="card"><div class="ic">🎓</div><h3>Dekat Kampus</h3><p>Melayani mahasiswa, masyarakat sekitar, dan pengguna jalan.</p></div>
+      <div class="card"><div class="ic">✅</div><h3>Mutu dan Halal</h3><p>Punya SOP serta Kebijakan Mutu dan Halal demi kualitas konsisten.</p></div>
+      <div class="card"><div class="ic">🛵</div><h3>Pesan Online</h3><p>Tersedia di Gojek, GrabFood, dan ShopeeFood.</p></div>
+    </div>
+    <div class="facts">
+      <div class="fact"><b>±1 Tahun</b><small>Lama usaha</small></div>
+      <div class="fact"><b>Cikarang &amp; Karawang</b><small>Jaringan Hi! Kebab</small></div>
+      <div class="fact"><b>Kebab Republik</b><small>Komunitas</small></div>
+      <div class="fact"><b>IG &amp; TikTok</b><small>Media digital</small></div>
+    </div>
+  </div>
+</section>
+
+<section id="menu" class="alt">
+  <div class="wrap">
+    <h2>Menu Beef Kebab</h2>
+    <p class="sub" id="menuSub"></p>
+    <div class="tabs">
+      <button class="tab on" data-size="big">BIG</button>
+      <button class="tab" data-size="small">SMALL</button>
+    </div>
+    <div class="grid" id="menuGrid"></div>
+  </div>
+</section>
+
+<section id="putar">
+  <div class="wrap">
+    <h2>Putaran Harian</h2>
+    <p class="sub">Satu kali per hari untuk setiap email. Hadiah: Gratis Ongkir, Diskon 5% semua menu, atau Zonk.</p>
+    <div class="spinbox">
+      <div class="wheelwrap">
+        <div class="pointer"></div>
+        <div id="wheel"></div>
+        <div class="hub">HI!</div>
+      </div>
+      <div>
+        <div class="chips"><span class="chip">🚚 Gratis Ongkir</span><span class="chip">🏷️ Diskon 5%</span><span class="chip">💨 Zonk</span></div>
+        <div id="spinMsg">Masukkan email untuk memutar roda.</div>
+        <button class="btn red" id="spinBtn">PUTAR SEKARANG</button>
+        <p class="note">Hadiah berlaku hari ini dan direset otomatis besok.</p>
+        <button class="btn dark mini" id="resetBtn">Reset (uji coba)</button>
+      </div>
+    </div>
+  </div>
+</section>
+
+<section id="keranjang" class="alt">
+  <div class="wrap">
+    <h2>Keranjang Pesanan</h2>
+    <p class="sub">Cek pesananmu, lalu kirim lewat WhatsApp.</p>
+    <div class="cart">
+      <div id="cartList"></div>
+      <div class="sum" id="cartSum"></div>
+      <p><button class="btn red" id="checkout" disabled>Pesan via WhatsApp</button></p>
+    </div>
+  </div>
+</section>
+
+<div class="bar" id="bar"><span id="barTxt"></span><a href="#keranjang">Lihat</a></div>
+<footer>
+  <p><b>Hi! Kebab Signature</b> · Kebab kekinian untuk mahasiswa dan masyarakat sekitar</p>
+  <p class="sosmed">
+    <a href="https://www.instagram.com/hi_kebab?cplk=dzk1M2U3djN4dGFh" target="_blank" rel="noopener noreferrer">📸 Instagram</a>
+    <a href="https://www.tiktok.com/@hikebab?_r=1&amp;_t=ZS-9AeW2seO8IP" target="_blank" rel="noopener noreferrer">🎵 TikTok</a>
+    <a href="https://gofood.link/a/Q2qKnCG" target="_blank" rel="noopener noreferrer">🛵 Gojek / GoFood</a>
+  </p>
+  <p class="note">Juga tersedia di GrabFood dan ShopeeFood</p>
+</footer>
+
+<div class="modal" id="modal" role="dialog" aria-modal="true" aria-labelledby="mTitle">
+  <div class="box">
+    <div class="ic">📧</div>
+    <h3 id="mTitle">Masukkan emailmu dulu ya</h3>
+    <p>Email dibutuhkan untuk memesan dan memutar hadiah harian.</p>
+    <input type="email" id="emailIn" placeholder="nama@email.com" autocomplete="email">
+    <div id="emailErr" class="err"></div>
+    <button class="btn red" id="emailOk">Lanjut</button>
+    <button class="btn ghost" id="emailNo">Batal</button>
+  </div>
+</div>
+<div id="toast"></div>
+<script src="script.js"></script>
+</body>
+</html>
